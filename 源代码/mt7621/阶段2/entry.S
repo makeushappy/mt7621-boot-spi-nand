@@ -16,6 +16,15 @@
 	.set	nomips16
 	.set	noreorder
 
+EXPORT(_dramc_cpu_freq)
+	.word	880
+EXPORT(_dramc_ddr_freq)
+	.word	1
+
+EXPORT(_dramc_ddr2_act_sel)
+	.word	2
+EXPORT(_dramc_ddr3_act_sel)
+	.word	3
 ENTRY(_start)
 EXPORT(stage2_info)
 	b	_start_real
